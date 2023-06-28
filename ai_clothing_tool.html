@@ -12,20 +12,26 @@
         <button id="showkeybtn" onclick="showkey()">Show API Key</button>
     </header>
     <header class="container">
-        <img style="position: absolute;   top: 0;
+        <img style=" position: absolute;   top: 0;
         left: 0;" id="result" src="template.png" alt="">
         <img style="position: relative; right: 0%; visibility: hidden;" id="overlay" src="overlay.png" alt="">
     </header>
 </body>
-
 <style>
-
-.container {
+    .container {
   width: 50%;
+  height: 90%;
   position: relative;
   margin: 0;
-  padding-bottom: 100%;
-}</style>
+}
+img {
+  display: block;
+  max-width:100%;
+  max-height:100%;
+  width: auto;
+  height: auto;
+}
+</style>
 <script>
     function showkey() {
         if (document.getElementById("apikey").type == "password") {
