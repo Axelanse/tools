@@ -11,10 +11,21 @@
             <input id="grnbtn" onclick="generate()" value="Generate" type="submit">
         <button id="showkeybtn" onclick="showkey()">Show API Key</button>
     </header>
-    <header>
-        <img id="result" src="template.png" alt="">
+    <header class="container">
+        <img style="visibility: hidden; position: absolute;   top: 0;
+        left: 0;" id="result" src="template.png" alt="">
+        <img style="position: relative; right: 0%; visibility: hidden;" id="overlay" src="overlay.png" alt="">
     </header>
 </body>
+
+<style>
+
+.container {
+  width: 50%;
+  position: relative;
+  margin: 0;
+  padding-bottom: 100%;
+}</style>
 <script>
     function showkey() {
         if (document.getElementById("apikey").type == "password") {
