@@ -71,6 +71,7 @@ img {
         if (document.getElementById('apikey').value != "") {
             console.log('generating '+ document.getElementById('prmpt').value + ' As a '+ document.getElementById('selecting').options[document.getElementById('selecting').selectedIndex].innerHTML)
             document.getElementById('result').src = "loading.gif"
+            document.getElementById('overlay').style.visibility = 'hidden';
                 query({"inputs": document.getElementById('prmpt').value + '-' + document.getElementById('selecting').options[document.getElementById('selecting').selectedIndex].value}).then((response) => {
                 usedata(response);
             });
