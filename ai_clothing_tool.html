@@ -12,7 +12,7 @@
         <button id="showkeybtn" onclick="showkey()">Show API Key</button>
     </header>
     <header class="container">
-        <img style="visibility: hidden; position: absolute;   top: 0;
+        <img style="position: absolute;   top: 0;
         left: 0;" id="result" src="template.png" alt="">
         <img style="position: relative; right: 0%; visibility: hidden;" id="overlay" src="overlay.png" alt="">
     </header>
@@ -42,6 +42,7 @@
         var urlCreator = window.URL || window.webkitURL;
         var imageUrl = urlCreator.createObjectURL(responseBlob);
         document.getElementById('result').src = imageUrl;
+        document.getElementById('overlay').style.visibility = 'visible';
         console.log('generated')
     }
 
